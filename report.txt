@@ -1,0 +1,295 @@
+
+    ________                      __
+    \_____  \  __ _______ _______|  | __
+     /  / \  \|  |  \__  \_  __ \  |/ /
+    /   \_/.  \  |  // __ \|  | \/    <
+    \_____\ \_/____/(____  /__|  |__|_ \
+           \__>          \/           \/ v26.9.1
+    
+                An Obfuscation-Neglect Android Malware Scoring System
+                
+[!] WARNING: High Risk
+[*] Total Score: -0.20000000000000145
++------------+--------------------------------------------------------------------------------------------+------------+-------+-----------+
+| Filename   | Rule                                                                                       | Confidence | Score | Weight    |
++------------+--------------------------------------------------------------------------------------------+------------+-------+-----------+
+| 00001.json | Initialize bitmap object and compress data (e.g. JPEG) into bitmap object                  | 60%        | 0.21  | 0.0525    |
+| 00002.json | Open the camera and take picture                                                           | 20%        | 0.26  | 0.01625   |
+| 00003.json | Put the compressed bitmap data into JSON object                                            | 40%        | -0.45 | -0.05625  |
+| 00004.json | Get filename and put it to JSON object                                                     | 40%        | -0.71 | -0.08875  |
+| 00005.json | Get absolute path of file and put it to JSON object                                        | 40%        | -0.46 | -0.0575   |
+| 00006.json | Scheduling recording task                                                                  | 20%        | -0.44 | -0.0275   |
+| 00007.json | Use absolute path of directory for the output media file path                              | 40%        | -0.09 | -0.01125  |
+| 00008.json | Check if successfully sending out SMS                                                      | 40%        | 0.11  | 0.01375   |
+| 00009.json | Put data in cursor to JSON object                                                          | 40%        | -1.26 | -0.1575   |
+| 00010.json | Read sensitive data(SMS, CALLLOG) and put it into JSON object                              | 40%        | -0.69 | -0.08625  |
+| 00011.json | Query data from URI (SMS, CALLLOGS)                                                        | 60%        | 2.3   | 0.575     |
+| 00012.json | Read data and put it into a buffer stream                                                  | 40%        | -0.15 | -0.01875  |
+| 00013.json | Read file and put it into a stream                                                         | 100%       | 0.93  | 0.93      |
+| 00014.json | Read file into a stream and put it into a JSON object                                      | 40%        | -1.42 | -0.1775   |
+| 00015.json | Put buffer stream (data) to JSON object                                                    | 40%        | -0.01 | -0.00125  |
+| 00016.json | Get location info of the device and put it to JSON object                                  | 40%        | 0.74  | 0.0925    |
+| 00017.json | Get Location of the device and append this info to a string                                | 60%        | 0.05  | 0.0125    |
+| 00018.json | Get JSON object prepared and fill in location info                                         | 20%        | -0.53 | -0.033125 |
+| 00019.json | Find a method from given class name, usually for reflection                                | 100%       | -0.43 | -0.43     |
+| 00020.json | Get absolute path of the file and store in string                                          | 100%       | 0.22  | 0.22      |
+| 00021.json | Load additional DEX files dynamically                                                      | 60%        | -0.07 | -0.0175   |
+| 00022.json | Open a file from given absolute path of the file                                           | 100%       | 1.35  | 1.35      |
+| 00023.json | Start another application from current application                                         | 100%       | 2.54  | 2.54      |
+| 00024.json | Write file after Base64 decoding                                                           | 20%        | 0.27  | 0.016875  |
+| 00025.json | Monitor the general action to be performed                                                 | 100%       | 1.07  | 1.07      |
+| 00026.json | Method reflection                                                                          | 100%       | 0.09  | 0.09      |
+| 00027.json | Get specific method from other Dex files                                                   | 60%        | -0.93 | -0.2325   |
+| 00028.json | Read file from assets directory                                                            | 100%       | 1.87  | 1.87      |
+| 00029.json | Initialize class object dynamically                                                        | 100%       | 0.42  | 0.42      |
+| 00030.json | Connect to the remote server through the given URL                                         | 80%        | -0.96 | -0.48     |
+| 00031.json | Check the list of currently running applications                                           | 40%        | -0.1  | -0.0125   |
+| 00032.json | Load external class                                                                        | 100%       | -1.51 | -1.51     |
+| 00033.json | Query the IMEI number                                                                      | 40%        | 1.55  | 0.19375   |
+| 00034.json | Query the current data network type                                                        | 40%        | 0.19  | 0.02375   |
+| 00035.json | Query the list of the installed packages                                                   | 40%        | 1.73  | 0.21625   |
+| 00036.json | Get resource file from res/raw directory                                                   | 100%       | -0.28 | -0.28     |
+| 00037.json | Send notification                                                                          | 60%        | -1.85 | -0.4625   |
+| 00038.json | Query the phone number                                                                     | 40%        | 1.29  | 0.16125   |
+| 00039.json | Start a web server                                                                         | 20%        | -0.74 | -0.04625  |
+| 00040.json | Send SMS                                                                                   | 20%        | -1.41 | -0.088125 |
+| 00041.json | Save recorded audio/video to file                                                          | 40%        | -0.43 | -0.05375  |
+| 00042.json | Query WiFi BSSID and scan results                                                          | 20%        | 0.14  | 0.00875   |
+| 00043.json | Calculate WiFi signal strength                                                             | 20%        | -0.46 | -0.02875  |
+| 00044.json | Query the last time this package's activity was used                                       | 20%        | -0.11 | -0.006875 |
+| 00045.json | Query the name of currently running application                                            | 20%        | 0.96  | 0.06      |
+| 00046.json | Method reflection                                                                          | 100%       | 0.12  | 0.12      |
+| 00047.json | Query the local IP address                                                                 | 40%        | -0.33 | -0.04125  |
+| 00048.json | Query the SMS contents                                                                     | 20%        | -0.22 | -0.01375  |
+| 00049.json | Query the phone number from SMS sender                                                     | 20%        | -0.79 | -0.049375 |
+| 00050.json | Query the SMS service centre timestamp                                                     | 20%        | 0.63  | 0.039375  |
+| 00051.json | Implicit intent(view a web page, make a phone call, etc.) via setData                      | 100%       | -0.09 | -0.09     |
+| 00052.json | Deletes media specified by a content URI(SMS, CALL_LOG, File, etc.)                        | 40%        | 0.04  | 0.005     |
+| 00053.json | Monitor data identified by a given content URI changes(SMS, MMS, etc.)                     | 40%        | -1.42 | -0.1775   |
+| 00054.json | Install other APKs from file                                                               | 100%       | 0.4   | 0.4       |
+| 00055.json | Query the SMS content and the source of the phone number                                   | 20%        | -0.42 | -0.02625  |
+| 00056.json | Modify voice volume                                                                        | 20%        | -0.51 | -0.031875 |
+| 00057.json | Return the DHCP-assigned addresses from the last successful DHCP request                   | 40%        | -0.7  | -0.0875   |
+| 00058.json | Connect to the specific WIFI network                                                       | 20%        | -0.28 | -0.0175   |
+| 00059.json | Query the SIM card status                                                                  | 40%        | -0.76 | -0.095    |
+| 00060.json | Query the network operator name                                                            | 40%        | -0.48 | -0.06     |
+| 00061.json | Return dynamic information about the current Wi-Fi connection                              | 40%        | 0.56  | 0.07      |
+| 00062.json | Query WiFi information and WiFi Mac Address                                                | 20%        | 0.18  | 0.01125   |
+| 00063.json | Implicit intent(view a web page, make a phone call, etc.)                                  | 100%       | 0.46  | 0.46      |
+| 00064.json | Monitor incoming call status                                                               | 40%        | -0.18 | -0.0225   |
+| 00065.json | Get the country code of the SIM card provider                                              | 40%        | 0.11  | 0.01375   |
+| 00066.json | Query the ICCID number                                                                     | 40%        | 0.04  | 0.005     |
+| 00067.json | Query the IMSI number                                                                      | 40%        | 1.22  | 0.1525    |
+| 00068.json | Executes the specified string Linux command                                                | 40%        | 1.55  | 0.19375   |
+| 00069.json | Run shell script programmably                                                              | 20%        | 0.66  | 0.04125   |
+| 00070.json | Get sender's address and send SMS                                                          | 20%        | -0.07 | -0.004375 |
+| 00071.json | Write the ISO country code of the current network operator into a file                     | 20%        | -0.46 | -0.02875  |
+| 00072.json | Write HTTP input stream into a file                                                        | 60%        | 0.59  | 0.1475    |
+| 00073.json | Write the SIM card information into a file                                                 | 20%        | -0.44 | -0.0275   |
+| 00074.json | Get IMSI and the ISO country code                                                          | 20%        | -0.14 | -0.00875  |
+| 00075.json | Get location of the device                                                                 | 100%       | -1.41 | -1.41     |
+| 00076.json | Get the current WiFi information and put it into JSON                                      | 20%        | -0.11 | -0.006875 |
+| 00077.json | Read sensitive data(SMS, CALLLOG, etc)                                                     | 100%       | 1.46  | 1.46      |
+| 00078.json | Get the network operator name                                                              | 40%        | -0.81 | -0.10125  |
+| 00079.json | Hide the current app's icon                                                                | 100%       | 0.82  | 0.82      |
+| 00080.json | Save recorded audio/video to a file                                                        | 40%        | -0.08 | -0.01     |
+| 00081.json | Get declared method from given method name                                                 | 100%       | -1.45 | -1.45     |
+| 00082.json | Get the current WiFi MAC address                                                           | 40%        | -0.05 | -0.00625  |
+| 00083.json | Query the IMEI number                                                                      | 40%        | -0.04 | -0.005    |
+| 00084.json | Get the ISO country code and IMSI                                                          | 20%        | -0.25 | -0.015625 |
+| 00085.json | Get the ISO country code and put it into JSON                                              | 20%        | 0.43  | 0.026875  |
+| 00086.json | Check if the device is in data roaming mode                                                | 60%        | -1.56 | -0.39     |
+| 00087.json | Check the current network type                                                             | 60%        | -0.74 | -0.185    |
+| 00088.json | Create a secure socket connection to the given host address                                | 60%        | 0.07  | 0.0175    |
+| 00089.json | Connect to a URL and receive input stream from the server                                  | 80%        | -1.28 | -0.64     |
+| 00090.json | Set recroded audio/video file format                                                       | 40%        | -0.39 | -0.04875  |
+| 00091.json | Retrieve data from broadcast                                                               | 60%        | 0.05  | 0.0125    |
+| 00092.json | Send broadcast                                                                             | 40%        | -0.5  | -0.0625   |
+| 00093.json | Get the content of SMS and forward it to others via SMS                                    | 20%        | -0.29 | -0.018125 |
+| 00094.json | Connect to a URL and read data from it                                                     | 100%       | -0.04 | -0.04     |
+| 00095.json | Write the ICCID of device into a file                                                      | 20%        | -0.31 | -0.019375 |
+| 00096.json | Connect to a URL and set request method                                                    | 100%       | -1.41 | -1.41     |
+| 00097.json | Get the sender address of the SMS and put it into JSON                                     | 20%        | -0.53 | -0.033125 |
+| 00098.json | Check if the network is connected                                                          | 60%        | -1.38 | -0.345    |
+| 00099.json | Get location of the current GSM and put it into JSON                                       | 20%        | 0.28  | 0.0175    |
+| 00100.json | Check the network capabilities                                                             | 60%        | -0.22 | -0.055    |
+| 00101.json | Initialize recorder                                                                        | 40%        | -0.33 | -0.04125  |
+| 00102.json | Set the phone speaker on                                                                   | 40%        | -0.31 | -0.03875  |
+| 00103.json | Check the active network type                                                              | 60%        | -1.32 | -0.33     |
+| 00104.json | Check if the given path is directory                                                       | 60%        | 0.4   | 0.1       |
+| 00105.json | Append the sender's address to the string                                                  | 40%        | 0.28  | 0.035     |
+| 00106.json | Get the currently formatted WiFi IP address                                                | 20%        | -0.56 | -0.035    |
+| 00107.json | Write the IMSI number into a file                                                          | 20%        | 0.05  | 0.003125  |
+| 00108.json | Read the input stream from given URL                                                       | 60%        | 1.5   | 0.375     |
+| 00109.json | Connect to a URL and get the response code                                                 | 100%       | 0.06  | 0.06      |
+| 00110.json | Query the ICCID number                                                                     | 20%        | -0.96 | -0.06     |
+| 00111.json | Get the sender address of the SMS                                                          | 20%        | 0.29  | 0.018125  |
+| 00112.json | Get the date of the calendar event                                                         | 40%        | 0.21  | 0.02625   |
+| 00113.json | Get location and put it into JSON                                                          | 40%        | 0.32  | 0.04      |
+| 00114.json | Create a secure socket connection to the proxy address                                     | 60%        | 0.14  | 0.035     |
+| 00115.json | Get last known location of the device                                                      | 100%       | 0.22  | 0.22      |
+| 00116.json | Get the current WiFi MAC address and put it into JSON                                      | 20%        | -0.11 | -0.006875 |
+| 00117.json | Get the IMSI and network operator name                                                     | 20%        | 0.05  | 0.003125  |
+| 00118.json | Check if the content of SMS contains given string                                          | 40%        | -0.07 | -0.00875  |
+| 00119.json | Write the IMEI number into a file                                                          | 20%        | 0.14  | 0.00875   |
+| 00120.json | Append the sender's address to the string                                                  | 40%        | 0.02  | 0.0025    |
+| 00121.json | Create a directory                                                                         | 60%        | 0.13  | 0.0325    |
+| 00122.json | Check if the sender address of SMS contains the given string                               | 40%        | -0.1  | -0.0125   |
+| 00123.json | Save the response to JSON after connecting to the remote server                            | 60%        | -0.46 | -0.115    |
+| 00124.json | Check the current active network type                                                      | 60%        | -0.2  | -0.05     |
+| 00125.json | Check if the given file path exist                                                         | 60%        | -0.36 | -0.09     |
+| 00126.json | Read sensitive data(SMS, CALLLOG, etc)                                                     | 40%        | 0.12  | 0.015     |
+| 00127.json | Monitor the broadcast action events (BOOT_COMPLETED, etc)                                  | 40%        | 0.15  | 0.01875   |
+| 00128.json | Query user account information                                                             | 20%        | 0.61  | 0.038125  |
+| 00129.json | Get the content of SMS                                                                     | 20%        | 0.9   | 0.05625   |
+| 00130.json | Get the current WIFI information                                                           | 40%        | 1.35  | 0.16875   |
+| 00131.json | Get location of the current GSM and put it into JSON                                       | 20%        | 0.05  | 0.003125  |
+| 00132.json | Query The ISO country code                                                                 | 40%        | -0.95 | -0.11875  |
+| 00133.json | Start recording                                                                            | 40%        | -0.4  | -0.05     |
+| 00134.json | Get the current WiFi IP address                                                            | 40%        | -0.61 | -0.07625  |
+| 00135.json | Get the current WiFi id and put it into JSON.                                              | 20%        | -0.12 | -0.0075   |
+| 00136.json | Stop recording                                                                             | 40%        | -0.34 | -0.0425   |
+| 00137.json | Get last known location of the device                                                      | 40%        | 0.07  | 0.00875   |
+| 00138.json | Set the audio source (MIC)                                                                 | 40%        | -0.02 | -0.0025   |
+| 00139.json | Get the current WiFi id                                                                    | 40%        | 0.06  | 0.0075    |
+| 00140.json | Write the phone number into a file                                                         | 20%        | -0.04 | -0.0025   |
+| 00141.json | Load class from given class name                                                           | 60%        | -1.17 | -0.2925   |
+| 00142.json | Get calendar information                                                                   | 100%       | 1.48  | 1.48      |
+| 00143.json | Get external class from given path or file name                                            | 40%        | -0.17 | -0.02125  |
+| 00144.json | Write SIM card serial number into a file                                                   | 20%        | -0.11 | -0.006875 |
+| 00145.json | Create a socket connection to the proxy address                                            | 60%        | 0.26  | 0.065     |
+| 00146.json | Get the network operator name and IMSI                                                     | 20%        | 0.08  | 0.005     |
+| 00147.json | Get the time of current location                                                           | 100%       | -0.37 | -0.37     |
+| 00148.json | Create a socket connection to the given host address                                       | 60%        | 0.37  | 0.0925    |
+| 00149.json | Unpack an asset, possibly decrypt it and load it as DEX                                    | 20%        | -0.09 | -0.005625 |
+| 00150.json | Send IMSI over Internet                                                                    | 40%        | 0.15  | 0.01875   |
+| 00151.json | Send phone number over Internet                                                            | 40%        | -0.19 | -0.02375  |
+| 00152.json | Get data from HTTP and send SMS                                                            | 40%        | -0.06 | -0.0075   |
+| 00153.json | Send binary data over HTTP                                                                 | 20%        | 0.45  | 0.028125  |
+| 00154.json | Connect hostname to TCP or UDP socket using KryoNet                                        | 40%        | -0.29 | -0.03625  |
+| 00155.json | Execute commands on shell using DataOutputStream object                                    | 20%        | 0.51  | 0.031875  |
+| 00156.json | Acquire lock on Power Manager                                                              | 100%       | -1.51 | -1.51     |
+| 00157.json | Instantiate new object using reflection, possibly used for dexClassLoader                  | 100%       | 0.46  | 0.46      |
+| 00158.json | Connect to a URL and send sensitive data got from resolver                                 | 40%        | -0.39 | -0.04875  |
+| 00159.json | Use accessibility service to perform action getting node info by text                      | 20%        | 1.06  | 0.06625   |
+| 00160.json | Use accessibility service to perform action getting node info by View Id                   | 20%        | 1.11  | 0.069375  |
+| 00161.json | Perfom accessibility service action on accessibility node info                             | 20%        | 0.08  | 0.005     |
+| 00162.json | Create InetSocketAddress object and connecting to it                                       | 20%        | -0.87 | -0.054375 |
+| 00163.json | Create new Socket and connecting to it                                                     | 20%        | 0.11  | 0.006875  |
+| 00164.json | Get SMS address and send it through http                                                   | 20%        | -0.21 | -0.013125 |
+| 00165.json | Get SMS message body and send it through http                                              | 20%        | -0.21 | -0.013125 |
+| 00166.json | Get SMS message body and retrieve a string from it (possibly PIN / mTAN)                   | 20%        | -0.3  | -0.01875  |
+| 00167.json | Use accessibility service to perform action getting root in active window                  | 20%        | 1.43  | 0.089375  |
+| 00168.json | Use accessibility service to perform global action getting node info by text               | 20%        | 0.14  | 0.00875   |
+| 00169.json | Use accessibility service to perform global action getting node info by View Id            | 20%        | 0.8   | 0.05      |
+| 00170.json | Get installed applications and put the list in shared preferences                          | 40%        | 0.48  | 0.06      |
+| 00171.json | Compare network operator with a string                                                     | 40%        | -0.22 | -0.0275   |
+| 00172.json | Check Admin permissions to (probably) get them                                             | 0%         | -0.97 | 0         |
+| 00173.json | Get bounds in screen of an AccessibilityNodeInfo and perform action                        | 40%        | 0.28  | 0.035     |
+| 00174.json | Get all accounts by type and put them in a JSON object                                     | 20%        | -0.3  | -0.01875  |
+| 00175.json | Get notification manager and cancel notifications                                          | 40%        | -1.51 | -0.18875  |
+| 00176.json | Send sms to a contact of contact list                                                      | 0%         | -0.19 | 0         |
+| 00177.json | Check if permission is granted and request it                                              | 100%       | -1.41 | -1.41     |
+| 00178.json | Execute Linux commands via ProcessBuilder                                                  | 20%        | -0.15 | -0.009375 |
+| 00179.json | Send Location via SMS                                                                      | 0%         | -0.96 | 0         |
+| 00180.json | Load native libraries(.so) via System.loadLibrary (60% means caught)                       | 20%        | -0.53 | -0.033125 |
+| 00181.json | Load native libraries(.so) via System.load (60% means caught)                              | 20%        | -0.62 | -0.03875  |
+| 00182.json | Open camera.                                                                               | 40%        | 0.15  | 0.01875   |
+| 00183.json | Get current camera paremeters and change the setting.                                      | 20%        | 0.09  | 0.005625  |
+| 00184.json | Set camera preview texture                                                                 | 40%        | 0.5   | 0.0625    |
+| 00185.json | Start capturing camera preview frames to the screen                                        | 40%        | 0.33  | 0.04125   |
+| 00186.json | Control camera to take picture                                                             | 40%        | 0.76  | 0.095     |
+| 00187.json | Query a URI and check the result                                                           | 60%        | -1.45 | -0.3625   |
+| 00188.json | Get the address of a SMS message                                                           | 60%        | -0.32 | -0.08     |
+| 00189.json | Get the content of a SMS message                                                           | 60%        | -0.23 | -0.0575   |
+| 00190.json | Query a URI and append the result into a string                                            | 80%        | -0.09 | -0.045    |
+| 00191.json | Get messages in the SMS inbox                                                              | 80%        | 0.41  | 0.205     |
+| 00192.json | Get messages in the SMS inbox                                                              | 60%        | 0.05  | 0.0125    |
+| 00193.json | Send a SMS message                                                                         | 20%        | 0.96  | 0.06      |
+| 00194.json | Set the audio source (MIC) and recorded file format                                        | 20%        | -0.42 | -0.02625  |
+| 00195.json | Set the output path of the recorded file                                                   | 40%        | 0.01  | 0.00125   |
+| 00196.json | Set the recorded file format and output path                                               | 20%        | 0.04  | 0.0025    |
+| 00197.json | Set the audio encoder and initialize the recorder                                          | 20%        | -0.09 | -0.005625 |
+| 00198.json | Initialize the recorder and start recording                                                | 20%        | -0.33 | -0.020625 |
+| 00199.json | Stop recording and release recording resources                                             | 20%        | -0.53 | -0.033125 |
+| 00200.json | Query data from the contact list                                                           | 60%        | -0.2  | -0.05     |
+| 00201.json | Query data from the call log                                                               | 60%        | -0.28 | -0.07     |
+| 00202.json | Make a phone call                                                                          | 80%        | -0.59 | -0.295    |
+| 00203.json | Put a phone number into an intent                                                          | 80%        | -0.15 | -0.075    |
+| 00204.json | Get the default ringtone                                                                   | 20%        | -0.4  | -0.025    |
+| 00205.json | Simulate a touch gesture on the device screen                                              | 20%        | 0.67  | 0.041875  |
+| 00206.json | Check if the text of the view contains the given string                                    | 60%        | 0.01  | 0.0025    |
+| 00207.json | Check if the resource name of the view contains the given string                           | 60%        | -0.01 | -0.0025   |
+| 00208.json | Capture the contents of the device screen                                                  | 20%        | 0.16  | 0.01      |
+| 00209.json | Get pixels from the latest rendered image                                                  | 20%        | 1.13  | 0.070625  |
+| 00210.json | Copy pixels from the latest rendered image into a Bitmap                                   | 20%        | -0.01 | -0.000625 |
+| 00211.json | Open an URL in Wevbiew                                                                     | 20%        | -0.46 | -0.02875  |
+| 00212.json | Query device data with ContentResolver                                                     | 100%       | 0.75  | 0.75      |
+| 00213.json | Get device latitude and check if logging is enabled                                        | 60%        | -0.15 | -0.0375   |
+| 00214.json | Get device time and longitude                                                              | 100%       | -0.11 | -0.11     |
+| 00215.json | Query device data with ContentResolver and obtain the number of results                    | 100%       | 0.23  | 0.23      |
+| 00216.json | Query device data with ContentResolver and obtain the number of results                    | 60%        | -1.37 | -0.3425   |
+| 00217.json | Get secure system settings and log warning messages                                        | 100%       | -1.01 | -1.01     |
+| 00218.json | Query device data with ContentResolver                                                     | 60%        | 0.42  | 0.105     |
+| 00219.json | Query device data with ContentResolver                                                     | 100%       | 2.37  | 2.37      |
+| 00220.json | Get the column index of device data and store a string in SharedPreferences                | 100%       | 0.42  | 0.42      |
+| 00221.json | Query device data with ContentResolver                                                     | 100%       | -1.78 | -1.78     |
+| 00222.json | Query device data with ContentResolver and a URI parsed from a string                      | 100%       | 0.86  | 0.86      |
+| 00223.json | Access ContentResolver                                                                     | 40%        | -0.55 | -0.06875  |
+| 00224.json | Check for network connectivity                                                             | 100%       | -0.96 | -0.96     |
+| 00225.json | Start a background service                                                                 | 60%        | 0.48  | 0.12      |
+| 00226.json | Check for network connectivity                                                             | 100%       | -0.97 | -0.97     |
+| 00227.json | Start a background service                                                                 | 60%        | 0.75  | 0.1875    |
+| 00228.json | Access PackageManager and check for network connectivity                                   | 60%        | -0.88 | -0.22     |
+| 00229.json | Start an activity                                                                          | 100%       | -1.17 | -1.17     |
+| 00230.json | Start a background service                                                                 | 100%       | 1.02  | 1.02      |
+| 00231.json | Get the package info of a particular app                                                   | 100%       | -0.06 | -0.06     |
+| 00232.json | Create an intent based on the info from PackageManager                                     | 80%        | 2.02  | 1.01      |
+| 00233.json | Create an intent and check if any installed app can handle it                              | 60%        | 0.26  | 0.065     |
+| 00234.json | Monitor incoming SMS message                                                               | 80%        | 0.85  | 0.425     |
+| 00235.json | Monitor outgoing phone call                                                                | 80%        | 0.74  | 0.37      |
+| 00236.json | Write data to file                                                                         | 40%        | -0.72 | -0.09     |
+| 00237.json | Write file content to an output stream                                                     | 40%        | -0.41 | -0.05125  |
+| 00238.json | Extract screenshot data to bitmap format                                                   | 40%        | -0.2  | -0.025    |
+| 00239.json | Establish a connection to an IP address                                                    | 60%        | 0.52  | 0.13      |
+| 00240.json | Simulate user gestures                                                                     | 20%        | 0.68  | 0.0425    |
+| 00241.json | Get the description of a UI element                                                        | 40%        | 0.06  | 0.0075    |
+| 00242.json | Write data to a file                                                                       | 20%        | -0.77 | -0.048125 |
+| 00243.json | Connect to a URL and read data from it                                                     | 60%        | 0.7   | 0.175     |
+| 00244.json | Write data to a file                                                                       | 100%       | -1.03 | -1.03     |
+| 00245.json | Install other APKs from file                                                               | 60%        | 1.42  | 0.355     |
+| 00246.json | Create an overlay window on top of other applications                                      | 20%        | 0.71  | 0.044375  |
+| 00247.json | Establish a connection to an IP address                                                    | 40%        | 1.22  | 0.1525    |
+| 00248.json | Establish a connection to an NFC card                                                      | 20%        | 0.55  | 0.034375  |
+| 00249.json | Read the payment data stored in an NFC card                                                | 40%        | 0.33  | 0.04125   |
+| 00250.json | Create a UI layout from XML                                                                | 100%       | 1.0   | 1.0       |
+| 00251.json | Listen for user clicks on a UI element                                                     | 100%       | -0.12 | -0.12     |
+| 00252.json | Get the navigation bar height                                                              | 100%       | -0.37 | -0.37     |
+| 00253.json | Display URL content on a WebView                                                           | 40%        | 0.93  | 0.11625   |
+| 00254.json | Schedule a periodic job                                                                    | 100%       | -1.36 | -1.36     |
+| 00255.json | Save gestures into a list                                                                  | 40%        | -0.16 | -0.02     |
+| 00256.json | Read SMS message from PDU                                                                  | 0%         | -0.03 | 0         |
+| 00257.json | Get the status bar height                                                                  | 100%       | -0.49 | -0.49     |
+| 00258.json | Create an overlay window on top of other applications                                      | 60%        | -0.3  | -0.075    |
+| 00259.json | Allow website to access internal methods                                                   | 20%        | -0.8  | -0.05     |
+| 00260.json | Read SMS message from Intents                                                              | 0%         | -0.09 | 0         |
+| 00261.json | Dispatch gesture from a list                                                               | 20%        | -0.26 | -0.01625  |
+| 00262.json | Monitor device boot completion                                                             | 80%        | 0.99  | 0.495     |
+| 00263.json | Retrieve the application context and add a view to the window manager.                     | 40%        | 0.07  | 0.00875   |
+| 00264.json | Enumerate installed applications                                                           | 40%        | 1.16  | 0.145     |
+| 00265.json | Get application info and label                                                             | 100%       | -0.85 | -0.85     |
+| 00266.json | Read clipboard                                                                             | 60%        | -1.76 | -0.44     |
+| 00267.json | Dispatch gesture                                                                           | 20%        | 0.54  | 0.03375   |
+| 00268.json | Allocate canvas                                                                            | 100%       | -0.16 | -0.16     |
+| 00269.json | Compress bitmap                                                                            | 100%       | -1.12 | -1.12     |
+| 00270.json | Capture view                                                                               | 100%       | -0.28 | -0.28     |
+| 00271.json | Accessing sensitive data from content provider                                             | 100%       | 0.28  | 0.28      |
+| 00272.json | Resolve field via reflection                                                               | 100%       | 1.73  | 1.73      |
+| 00273.json | Send HTTP POST request and receive response                                                | 40%        | 1.43  | 0.17875   |
+| 00274.json | Modify PopupWindow width and invoke a method via reflection                                | 80%        | 1.32  | 0.66      |
+| 00275.json | Hide the current app's icon                                                                | 60%        | 0.87  | 0.2175    |
+| 00276.json | Invoke method dynamically via reflection                                                   | 100%       | 3.2   | 3.2       |
+| 00277.json | Configure custom timeout for IsoDep card communication (NFC reader-mode relay preparation) | 20%        | 0.94  | 0.05875   |
+| 00278.json | Configure video source and camcorder profile for video capture recording                   | 0%         | -0.94 | 0         |
+| 00279.json | Collect device IMEI and subscriber IMSI identifiers                                        | 20%        | 0.86  | 0.05375   |
++------------+--------------------------------------------------------------------------------------------+------------+-------+-----------+
